@@ -1,12 +1,54 @@
 {
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "headers": [
-    { "source": "/assets/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }] },
-    { "source": "/(.*)", "headers": [
-      { "key": "X-Content-Type-Options", "value": "nosniff" },
-      { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-      { "key": "X-Frame-Options", "value": "SAMEORIGIN" }
-    ] }
-  ]
+ "cleanUrls": true,
+ "trailingSlash": false,
+ "headers": [
+  {
+   "source": "/assets/(.*)",
+   "headers": [
+    {
+     "key": "Cache-Control",
+     "value": "public, max-age=31536000, immutable"
+    }
+   ]
+  },
+  {
+   "source": "/(.*)",
+   "headers": [
+    {
+     "key": "X-Content-Type-Options",
+     "value": "nosniff"
+    },
+    {
+     "key": "Referrer-Policy",
+     "value": "strict-origin-when-cross-origin"
+    },
+    {
+     "key": "X-Frame-Options",
+     "value": "SAMEORIGIN"
+    }
+   ]
+  }
+ ],
+ "redirects": [
+  {
+   "source": "/quality",
+   "destination": "/about#certification",
+   "permanent": true
+  },
+  {
+   "source": "/quality.html",
+   "destination": "/about#certification",
+   "permanent": true
+  },
+  {
+   "source": "/colours",
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/colours.html",
+   "destination": "/",
+   "permanent": true
+  }
+ ]
 }
